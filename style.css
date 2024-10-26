@@ -1,0 +1,235 @@
+:root {
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: "Karla", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: var(--font-primary);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #020323;
+}
+
+main {
+    margin: 6rem auto;
+    background-color: #1f2937;
+    color: #fff;
+    font-family: var(--font-primary);
+    max-width: 600px;
+    padding: 1.5rem;
+    border: 0px solid red;
+    border-radius: 20px;
+}
+
+div {
+    margin-bottom: .5rem;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+h1 > span {
+    color: #55f991;
+    display: block;
+}
+
+h2 {
+    margin: 1rem auto 0;
+    font-family: var(--font-secondary)
+}
+
+.buttons {
+    display: flex;
+    -ms-flex-align: baseline;
+    border-bottom: 1px solid #2f3e53;
+}
+
+button {
+    margin: 1rem 0.5rem 1rem auto;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border-radius: 6px;
+    outline-style: none;
+    border: none;
+    color: #fff;
+    background-color: #10b981;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background-color: #10c991;
+}
+
+button > i {
+    width: 1rem;
+    height: auto;
+}
+
+button > span {
+    padding: 8px 6px;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* FireFox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"] {
+    width: 100%;
+    margin: 1rem auto 1rem .5rem;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.input--password {
+    background-image: url("./Icon.svg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 2.2rem;
+    background-color: #273549;
+    background-position: center;
+    color: #55f991;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.input--password:focus {
+    background-color: none;
+    outline: none;
+    border: none;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 1rem auto 0;
+}
+
+.error-message {
+    color: red;
+    visibility: hidden;
+    margin: 1.5rem auto 1rem;
+    display: block;
+}
+
+.visibility {
+    visibility: visible;
+}
+
+.copy {
+    color: #fb8500;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+	width: 2.5rem;
+	height: 9px;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 50px;
+	background-image: linear-gradient(#55f991, #55f991);
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #55f991;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #55f991;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.range {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 550px) {
+    main {
+        margin: 4rem auto;
+        width: 82.5%;
+        border-radius: 5px;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .input--password {
+        width: 100%;
+    }
+
+    .range {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    input[type="number"] {
+        margin: 1rem 0;
+    }
+}
